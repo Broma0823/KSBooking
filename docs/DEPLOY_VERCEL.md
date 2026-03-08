@@ -57,12 +57,11 @@ Before the first deploy, add the same variables you use in `.env` locally.
 | `ADMIN_PASSWORD` | Your admin login password | Strong password; only you need to know it |
 | `DATABASE_SSL` | `true` | Optional; use if you see SSL errors |
 
-If you use PayMongo or Stripe, add:
+If you use PayMongo for online payment, add:
 
 | Name | Value |
 |------|--------|
 | `PAYMONGO_SECRET_KEY` | Your PayMongo secret key (e.g. `sk_test_...` or `sk_live_...`) |
-| `STRIPE_SECRET_KEY` | Your Stripe secret key (if using Stripe) |
 
 **Important:** Use the **exact** `DATABASE_URL` from Supabase (Transaction mode, with your real password). No spaces or quotes around the value.
 
@@ -109,7 +108,7 @@ In Vercel: **Project → Settings → Domains**, add your domain and follow the 
 |------|--------|
 | 1 | Push code to GitHub |
 | 2 | Vercel → Add New → Project → Import repo, set root to `choir-site` if needed |
-| 3 | Add `DATABASE_URL`, `ADMIN_EMAIL`, `ADMIN_PASSWORD` (and optional `DATABASE_SSL`, PayMongo/Stripe keys) |
+| 3 | Add `DATABASE_URL`, `ADMIN_EMAIL`, `ADMIN_PASSWORD` (and optional `DATABASE_SSL`, PayMongo keys) |
 | 4 | Click Deploy |
 | 5 | Run `manual-supabase-apply.sql` in Supabase if you haven’t already |
 | 6 | Test booking and admin login on the Vercel URL |
