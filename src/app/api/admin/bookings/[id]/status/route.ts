@@ -5,7 +5,7 @@ import { BookingStatus } from "@/generated/prisma/enums";
 
 export async function POST(
   request: Request,
-  context: { params: { id: string } },
+  context: { params: Promise<{ id: string }> },
 ) {
   const admin = await getCurrentAdmin();
 
@@ -19,7 +19,8 @@ export async function POST(
     return NextResponse.json({ error: "Invalid status" }, { status: 400 });
   }
 
-  const bookingId = Number(context.params.id);
+  const { id } = await context.params;
+  const bookingId = Number(id);
 
   if (Number.isNaN(bookingId)) {
     return NextResponse.json({ error: "Invalid booking id" }, { status: 400 });
