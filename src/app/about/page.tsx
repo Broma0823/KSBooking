@@ -6,13 +6,13 @@ export default function AboutPage() {
           About the choir
         </p>
         <h1 className="text-3xl font-semibold tracking-tight text-zinc-900">
-          KS Choir – voices for your most important moments.
+          KoroSeraphim – voices for your most important moments.
         </h1>
       </header>
       <div className="grid gap-10 md:grid-cols-[2fr,1.3fr]">
         <div className="space-y-5 text-sm leading-relaxed text-zinc-700">
           <p>
-            KS Choir is a professional vocal ensemble specialising in live music
+            KoroSeraphim is a professional vocal ensemble specialising in live music
             for weddings, corporate functions, concerts, and memorial services.
             We combine disciplined musicianship with warm, engaging performance
             to create moving musical moments for you and your guests.

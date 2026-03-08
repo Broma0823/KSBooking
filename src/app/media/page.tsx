@@ -41,7 +41,7 @@ export default function MediaPage() {
         </h2>
         <p className="text-xs text-zinc-600">
           Add a simple gallery of 6–10 photos featuring different venues, choir
-          formations, and dress codes so clients can imagine how KS Choir will
+          formations, and dress codes so clients can imagine how KoroSeraphim will
           look at their event.
         </p>
       </div>

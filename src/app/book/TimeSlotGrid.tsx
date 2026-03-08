@@ -162,7 +162,7 @@ export function TimeSlotGrid({
               Time
             </div>
             <div className="border-b border-zinc-200 bg-zinc-50 px-2 py-2 text-xs font-medium text-zinc-600">
-              KS Choir
+              KoroSeraphim
             </div>
             {Array.from({ length: slotCount }, (_, i) => (
               <React.Fragment key={i}>

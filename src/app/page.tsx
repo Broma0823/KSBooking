@@ -9,7 +9,7 @@ export default function Home() {
           Soulful choral music for weddings and special events.
         </h1>
         <p className="max-w-xl text-balance text-base text-zinc-600">
-          KS Choir brings rich vocal harmony, curated repertoire, and a
+          KoroSeraphim brings rich vocal harmony, curated repertoire, and a
           stress-free booking experience to your ceremony, reception, corporate
           function, or memorial service.
         </p>
@@ -44,7 +44,7 @@ export default function Home() {
       </div>
       <aside className="space-y-4 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
-          Why book KS Choir
+          Why book KoroSeraphim
         </p>
         <ul className="space-y-3 text-sm text-zinc-700">
           <li>• Flexible ensembles from small groups to full choir.</li>

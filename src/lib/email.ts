@@ -19,11 +19,11 @@ export async function sendBookingConfirmationEmail(params: {
   await resend.emails.send({
     from: FROM_ADDRESS,
     to,
-    subject: "KS Choir – Booking request received",
+    subject: "KoroSeraphim – Booking request received",
     text: [
       `Hi ${clientName},`,
       "",
-      "Thank you for your booking request with KS Choir.",
+      "Thank you for your booking request with KoroSeraphim.",
       "We have received your details and deposit payment. We will review everything and confirm the final details with you shortly.",
       "",
       `Your booking reference: #${bookingId.toString().padStart(5, "0")}`,
@@ -31,7 +31,7 @@ export async function sendBookingConfirmationEmail(params: {
       "If anything changes or you have questions, just reply to this email.",
       "",
       "Warm regards,",
-      "KS Choir",
+      "KoroSeraphim",
     ].join("\n"),
   });
 }
@@ -49,7 +49,7 @@ export async function sendNewBookingNotificationToAdmin(params: {
   await resend.emails.send({
     from: FROM_ADDRESS,
     to: process.env.ADMIN_EMAIL,
-    subject: `New KS Choir booking – #${bookingId.toString().padStart(5, "0")}`,
+    subject: `New KoroSeraphim booking – #${bookingId.toString().padStart(5, "0")}`,
     text: [
       "A new booking has been created.",
       "",

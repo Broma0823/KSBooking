@@ -150,14 +150,14 @@ export async function POST(request: Request) {
             {
               amount: amountCentavos,
               currency: "PHP",
-              name: `KS Choir deposit – ${packageConfig.name}`,
+              name: `KoroSeraphim deposit – ${packageConfig.name}`,
               description: packageConfig.description,
               quantity: 1,
             },
           ],
           cancel_url: `${origin}/book/cancel?bookingId=${booking.id}`,
           success_url: `${origin}/book/success?bookingId=${booking.id}`,
-          description: `KS Choir booking deposit – #${booking.id.toString().padStart(5, "0")}`,
+          description: `KoroSeraphim booking deposit – #${booking.id.toString().padStart(5, "0")}`,
           reference_number: booking.id.toString(),
           billing: {
             name: body.clientName,

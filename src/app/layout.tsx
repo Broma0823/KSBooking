@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KS Choir Booking",
+  title: "KoroSeraphim Booking",
   description:
     "Book a professional choir for weddings, corporate events, funerals, and special occasions.",
 };
@@ -34,7 +34,7 @@ export default function RootLayout({
             <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
               <Link href="/" className="flex items-baseline gap-2">
                 <span className="text-xl font-semibold tracking-tight">
-                  KS Choir
+                  KoroSeraphim
                 </span>
                 <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
                   Booking
@@ -68,7 +68,7 @@ export default function RootLayout({
           <main className="mx-auto max-w-6xl px-6 py-10">{children}</main>
           <footer className="border-t border-zinc-200 bg-white/80">
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-6 text-xs text-zinc-500 sm:flex-row">
-              <p>© {new Date().getFullYear()} KS Choir. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} KoroSeraphim. All rights reserved.</p>
               <p className="text-[11px]">
                 Available for weddings, corporate events, funerals, and special
                 occasions.
