@@ -1,5 +1,21 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Database (PostgreSQL)
+
+The app uses **PostgreSQL** with Prisma. Use a hosted database so it stays online and stable. **[Supabase](https://supabase.com)** is recommended—see **[docs/SUPABASE.md](docs/SUPABASE.md)** for step-by-step setup.
+
+Quick start with Supabase:
+
+1. Create a PostgreSQL database and copy its connection URL.
+2. Copy `.env.example` to `.env` and set `DATABASE_URL` to that URL.
+3. Run migrations:
+   ```bash
+   npx prisma migrate deploy
+   ```
+4. (Optional) If you add a seed script, run: `npx prisma db seed`
+
+For local development you can use the same hosted DB or run Postgres in Docker.
+
 ## Getting Started
 
 First, run the development server:
@@ -31,6 +47,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new). For this project (database, admin, env vars), see **[docs/DEPLOY_VERCEL.md](docs/DEPLOY_VERCEL.md)** for a step-by-step guide.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

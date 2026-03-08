@@ -1,0 +1,12 @@
+# Use LF for all text files (keeps Vercel/Linux and cross-platform in sync; avoids CRLF warnings on Windows)
+* text=auto eol=lf
+
+# Binary files: do not touch line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary

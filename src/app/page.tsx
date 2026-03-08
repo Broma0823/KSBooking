@@ -1,65 +1,62 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+    <section className="grid gap-10 md:grid-cols-[2fr,1.4fr] md:items-center">
+      <div className="space-y-6">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
+          Professional choir • Live music
+        </p>
+        <h1 className="text-balance text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl">
+          Soulful choral music for weddings and special events.
+        </h1>
+        <p className="max-w-xl text-balance text-base text-zinc-600">
+          KS Choir brings rich vocal harmony, curated repertoire, and a
+          stress-free booking experience to your ceremony, reception, corporate
+          function, or memorial service.
+        </p>
+        <div className="flex flex-wrap items-center gap-4">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/book"
+            className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-zinc-800"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            Check availability & book
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/repertoire"
+            className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-800 hover:border-zinc-400 hover:bg-white"
           >
-            Documentation
+            Explore repertoire
           </a>
         </div>
-      </main>
-    </div>
+        <div className="mt-4 grid gap-4 text-sm text-zinc-600 sm:grid-cols-3">
+          <div>
+            <p className="font-semibold text-zinc-900">Weddings</p>
+            <p>Processional, signing, and recessional music crafted for you.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-zinc-900">Corporate & gala</p>
+            <p>Elegant background sets or feature performances.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-zinc-900">Funerals & memorials</p>
+            <p>Respectful, comforting choral music to honour loved ones.</p>
+          </div>
+        </div>
+      </div>
+      <aside className="space-y-4 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
+          Why book KS Choir
+        </p>
+        <ul className="space-y-3 text-sm text-zinc-700">
+          <li>• Flexible ensembles from small groups to full choir.</li>
+          <li>• Repertoire from classical and hymns to gospel and pop.</li>
+          <li>• Professional planning support before your event.</li>
+          <li>• Clear pricing and simple online booking.</li>
+        </ul>
+        <p className="pt-2 text-xs text-zinc-500">
+          Tell us about your date, venue, and musical style, and we will confirm
+          a tailored package for your event.
+        </p>
+      </aside>
+    </section>
   );
 }

@@ -1,0 +1,87 @@
+
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Package {
+  id                   Int       @id @default(autoincrement())
+  name                 String
+  description          String
+  basePrice            Int
+  defaultDepositAmount Int
+  isActive             Boolean   @default(true)
+  bookings             Booking[]
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+}
+
+model Booking {
+  id                   Int       @id @default(autoincrement())
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+
+  status               BookingStatus @default(NEW)
+
+  eventDate            DateTime
+  startTime            String
+  durationMinutes      Int
+  eventType            String
+  venueName            String
+  venueAddress         String
+  guestCount           Int
+
+  package              Package   @relation(fields: [packageId], references: [id])
+  packageId            Int
+  basePrice            Int
+  depositAmount        Int
+
+  clientName           String
+  clientEmail          String
+  clientPhone          String
+  notes                String?
+
+  stripeSessionId      String?
+  stripePaymentIntentId String?
+  amountPaid           Int?
+  currency             String?   @default("usd")
+}
+
+enum BookingStatus {
+  NEW
+  PENDING_PAYMENT
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+model AdminUser {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  sessions     AdminSession[]
+}
+
+model AvailabilityRule {
+  id          Int      @id @default(autoincrement())
+  date        DateTime?
+  weekday     Int?     // 0-6 (Sunday-Saturday)
+  isAvailable Boolean  @default(true)
+  notes       String?
+}
+
+model AdminSession {
+  id        Int       @id @default(autoincrement())
+  token     String    @unique
+  admin     AdminUser @relation(fields: [adminId], references: [id])
+  adminId   Int
+  createdAt DateTime  @default(now())
+  expiresAt DateTime
+}
